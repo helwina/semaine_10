@@ -42,7 +42,7 @@ function prix() {
 
 //calcule le prix de la prochaine amelioration de l autoclic
 function autoclickprix(){
-    return Math.round(200 * (nbMultiplicateurAmelioAutoclick * 0.55));
+    return Math.round(200 * (nbMultiplicateurAmelioAutoclick * 0.40));
 }
 
 //prix pour augmenter la duree du clic auto

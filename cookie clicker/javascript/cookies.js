@@ -9,6 +9,9 @@ nbMultiplicateur = 1;
 nbMultiplicateurAmelioAutoclick = 1;
 score = 1;
 
+/*-----------------------------------------------------------------------------*\
+                affichage des score et du contenue des bouttons
+\*-----------------------------------------------------------------------------*/
 //affichage du score
 function afficherScore() {
     $score.innerHTML = "Score : " + score + " cookies";
@@ -35,6 +38,10 @@ function clic() {
     afficherScore();
 }
 
+/*----------------------------------------------------------------------*\
+       calcule du prix des ameliorations et de la duree de l autoclic
+\*----------------------------------------------------------------------*/
+
 //calcule le prix des augmentation
 function prix() {
     return 50 * (nbMultiplicateur * nbMultiplicateur * 0.2);
@@ -49,6 +56,15 @@ function autoclickprix(){
 function prixamelioclick(){
     return Math.round(500 * (nbMultiplicateurAmelioAutoclick * 0.5));
 }
+
+//calcule de la duree de l autoclick
+function amelioration(){
+    return nbMultiplicateurAmelioAutoclick +9;
+}
+
+/*----------------------------------------------------------------------*\
+                      achat des ameliorations
+\*----------------------------------------------------------------------*/
 
 //achete une amelioration et retire du score le prix de l amelioration
 function acheterMultiplicateur() {
@@ -87,6 +103,10 @@ function acheterAutoclick() {
     }
 }
 
+/*----------------------------------------------------------------------*\
+            interval entre les clic et duree du clic auto
+\*----------------------------------------------------------------------*/
+
 //interval entre chaque clic auto
 function autoclicker(){
     $stop = setInterval($bouton.onclick,500);
@@ -100,11 +120,6 @@ function stopintervall(){
 //stop le click auto
 function stopint(){
     clearInterval($stop);
-}
-
-//calcule de la duree de l autoclick
-function amelioration(){
-    return nbMultiplicateurAmelioAutoclick +9;
 }
 
 $amelioclick.onclick = acheterMultiplicateurAutoclick;

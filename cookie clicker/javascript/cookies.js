@@ -10,7 +10,7 @@ nbMultiplicateurAmelioAutoclick = 1;
 score = 1;
 
 /*-----------------------------------------------------------------------------*\
-                affichage des score et du contenue des bouttons
+            affichage et calcule du score et du contenue des bouttons
 \*-----------------------------------------------------------------------------*/
 //affichage du score
 function afficherScore() {
@@ -63,7 +63,7 @@ function amelioration(){
 }
 
 /*----------------------------------------------------------------------*\
-                      achat des ameliorations
+                          achat des ameliorations
 \*----------------------------------------------------------------------*/
 
 //achete une amelioration et retire du score le prix de l amelioration

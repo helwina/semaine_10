@@ -32,8 +32,15 @@ button, .container {
     width: 80%;
 }
 
-.score {
+.score, .error {
     margin-top:20px;
     
     text-align: center;
+}
+
+.error {
+    color: red;
+    font-size:30px;
+    font-weight:bold;
+    text-transform: uppercase;
 }

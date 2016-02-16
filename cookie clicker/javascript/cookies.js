@@ -1,13 +1,14 @@
 $amelioclick = document.getElementById("amelioclick");
 $autoclick = document.getElementById("autoclick");
 $bouton = document.getElementById("bouton");
+$error = document.getElementById("error");
 $multiplicateur = document.getElementById("multiplicateur");
 $score = document.getElementById("score");
 
 amelio = 1000;
 nbMultiplicateur = 1;
 nbMultiplicateurAmelioAutoclick = 1;
-score = 1;
+score = 0;
 
 /*-----------------------------------------------------------------------------*\
             affichage et calcule du score et du contenue des bouttons
@@ -74,7 +75,10 @@ function acheterMultiplicateur() {
         afficherNbMultiplicateur();
         afficherScore();
     } else {
-        alert("Vous n avez pas asser de cookies !");
+        $error.innerHTML = "Vous n avez pas asser de cookies !";
+        setTimeout(function(){
+            $error.innerHTML = ''
+        },3000);
     }
 }
 
@@ -87,7 +91,10 @@ function acheterMultiplicateurAutoclick(){
         afficherPrixAutoclick();
         afficherScore();
     } else {
-        alert("Vous n avez pas asser de cookies !");
+        $error.innerHTML = "Vous n avez pas asser de cookies !";
+        setTimeout(function(){
+            $error.innerHTML = ''
+        },3000);
     }
 }
 
@@ -99,7 +106,10 @@ function acheterAutoclick() {
         autoclicker();
         stopintervall();
     } else {
-        alert("Votre score est insuffisant !");
+        $error.innerHTML = "votre score est insufisant !";
+        setTimeout(function(){
+            $error.innerHTML = ''
+        },3000);
     }
 }
 
@@ -121,6 +131,12 @@ function stopintervall(){
 function stopint(){
     clearInterval($stop);
 }
+
+/*----------------------------------------------------------------------*\
+            affichage message d erreur pendant 5 sec
+\*----------------------------------------------------------------------*/
+
+
 
 $amelioclick.onclick = acheterMultiplicateurAutoclick;
 $bouton.onclick = clic;

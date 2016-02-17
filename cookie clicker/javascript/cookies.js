@@ -33,7 +33,7 @@ function afficherPrixAutoclick(){
 
 //affiche le prix de l augmentation de duree de l autoclick
 function afficherPrixAmelioAutoclick(){
-    $amelioclick.innerHTML = "Acheter une augmentation de la duree de l autoclic d une seconde pour " + prixamelioclick() + " cookies";
+    $amelioclick.innerHTML = "Acheter une augmentation d une seconde pour la duree de l autoclique  pour " + prixamelioclick() + " cookies";
 }
 
 //mise a jour du score a chaque clique

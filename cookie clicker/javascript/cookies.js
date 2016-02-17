@@ -75,10 +75,7 @@ function acheterMultiplicateur() {
         afficherNbMultiplicateur();
         afficherScore();
     } else {
-        $error.innerHTML = "Vous n avez pas asser de cookies !";
-        setTimeout(function(){
-            $error.innerHTML = ''
-        },3000);
+        error();
     }
 }
 
@@ -91,10 +88,7 @@ function acheterMultiplicateurAutoclick(){
         afficherPrixAutoclick();
         afficherScore();
     } else {
-        $error.innerHTML = "Vous n avez pas asser de cookies !";
-        setTimeout(function(){
-            $error.innerHTML = ''
-        },3000);
+        error();
     }
 }
 
@@ -106,10 +100,7 @@ function acheterAutoclick() {
         autoclicker();
         stopintervall();
     } else {
-        $error.innerHTML = "votre score est insufisant !";
-        setTimeout(function(){
-            $error.innerHTML = ''
-        },3000);
+        error();
     }
 }
 
@@ -133,10 +124,16 @@ function stopint(){
 }
 
 /*----------------------------------------------------------------------*\
-            affichage message d erreur pendant 5 sec
+                  message d erreur
 \*----------------------------------------------------------------------*/
 
-
+//affiche les message d erreur pendant quelques secondes
+function error(){
+    $error.innerHTML = "votre score est insufisant !";
+    setTimeout(function(){
+        $error.innerHTML = ''
+    },3000);
+}
 
 $amelioclick.onclick = acheterMultiplicateurAutoclick;
 $bouton.onclick = clic;

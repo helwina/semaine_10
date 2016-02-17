@@ -1,3 +1,6 @@
+/*-----------------------------------------------------------------------------*\
+                                variables
+\*-----------------------------------------------------------------------------*/
 $amelioclick = document.getElementById("amelioclick");
 $autoclick = document.getElementById("autoclick");
 $bouton = document.getElementById("bouton");
@@ -11,7 +14,7 @@ nbMultiplicateurAmelioAutoclick = 1;
 score = 0;
 
 /*-----------------------------------------------------------------------------*\
-            affichage et calcule du score et du contenue des bouttons
+            affichage et calcule du score et du contenu des bouttons
 \*-----------------------------------------------------------------------------*/
 //affichage du score
 function afficherScore() {
@@ -25,15 +28,15 @@ function afficherNbMultiplicateur() {
 
 //affichage du prix du click auto
 function afficherPrixAutoclick(){
-    $autoclick.innerHTML = "acheter un autoclick de " + amelioration() + " secondes au prix de " + autoclickprix() + " cookies";
+    $autoclick.innerHTML = "Acheter un autoclick de " + amelioration() + " secondes au prix de " + autoclickprix() + " cookies";
 }
 
 //affiche le prix de l augmentation de duree de l autoclick
 function afficherPrixAmelioAutoclick(){
-    $amelioclick.innerHTML = "acheter une augmentation de la duree de l autoclic pour " + prixamelioclick() + " cookies";
+    $amelioclick.innerHTML = "Acheter une augmentation de la duree de l autoclic d une seconde pour " + prixamelioclick() + " cookies";
 }
 
-//mise a jour du score a chaque clic
+//mise a jour du score a chaque clique
 function clic() {
     score = score + nbMultiplicateur;
     afficherScore();
@@ -43,7 +46,7 @@ function clic() {
        calcule du prix des ameliorations et de la duree de l autoclic
 \*----------------------------------------------------------------------*/
 
-//calcule le prix des augmentation
+//calcule le prix des augmentations
 function prix() {
     return 50 * (nbMultiplicateur * nbMultiplicateur * 0.2);
 }

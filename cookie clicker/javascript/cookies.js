@@ -11,7 +11,7 @@ $score = document.getElementById("score");
 amelio = 1000;
 nbMultiplicateur = 1;
 nbMultiplicateurAmelioAutoclick = 1;
-score = 0;
+score = 10000;
 
 /*-----------------------------------------------------------------------------*\
             affichage et calcule du score et du contenu des bouttons
@@ -101,7 +101,7 @@ function acheterAutoclick() {
         score = score - autoclickprix();
         afficherPrixAutoclick();
         autoclicker();
-        stopintervall();
+
     } else {
         error();
     }
@@ -111,19 +111,13 @@ function acheterAutoclick() {
             interval entre les clic et duree du clic auto
 \*----------------------------------------------------------------------*/
 
-//interval entre chaque clic auto
+//interval entre chaque clic et duree du clic auto
 function autoclicker(){
     $stop = setInterval($bouton.onclick,500);
-}
-
-//duree du click auto
-function stopintervall(){
     setTimeout(stopint,(9000 + (amelio * nbMultiplicateurAmelioAutoclick)));
-}
-
-//stop le click auto
-function stopint(){
-    clearInterval($stop);
+    function stopint() {
+        clearInterval($stop);
+    }
 }
 
 /*----------------------------------------------------------------------*\

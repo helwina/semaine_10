@@ -117,7 +117,19 @@ function autoclicker(){
         clearInterval($stop)
     },9000 + (amelio * nbMultiplicateurAmelioAutoclick));
 }
+/*
+function autoclicker(){
+     $stop = setInterval($bouton.onclick,500);
+}
 
+function stopintervall(){
+    setTimeout(stopint,10000);
+}
+
+function stopint(){
+    clearInterval($stop);
+ }
+*/
 /*----------------------------------------------------------------------*\
                   message d erreur
 \*----------------------------------------------------------------------*/
